@@ -1,6 +1,7 @@
 Fizz buzz
 =========
 
+
 How to configure
 ----------------
 
@@ -20,3 +21,14 @@ Install rspec:
 
 `gem install rspec`
 
+
+How to test
+-----------
+
+`rspec spec/fizz_buzz_spec.rb`
+
+
+How to play
+-----------
+
+`ruby main.rb`
