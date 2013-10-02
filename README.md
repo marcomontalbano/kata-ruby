@@ -2,6 +2,12 @@ Fizz buzz
 =========
 
 
+Fizz buzz?
+----------
+
+If you don't know what is Fizzbuzz looks at the [wiki](http://en.wikipedia.org/wiki/Fizz_buzz)
+
+
 How to configure
 ----------------
 
