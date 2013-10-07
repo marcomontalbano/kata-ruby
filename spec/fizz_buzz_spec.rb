@@ -11,6 +11,7 @@ module FizzBuzz
         expect{player.say "blah blah blah"}.to raise_error ::ArgumentError
       end
     end
+    
     context "for a given number" do
       it "cannot say zero" do
         expect{player.say 0}.to raise_error FizzBuzz::Player::CanNotSayZero
@@ -42,7 +43,7 @@ module FizzBuzz
 
       it "can say the number" do
         [1,2,4,7,8,11,13,14,16,17,19,22,23,26,28,29,31,32].each do |number|
-          player.say(number).should == number
+          player.say(number).should == number.to_s
         end
       end
     end

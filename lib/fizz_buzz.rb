@@ -11,16 +11,12 @@ module FizzBuzz
       fail CanNotSayNegatives if (number < 0)
 
       iSay = Array.new
+      iSay.push "Fizz" if canISayFizz?(number)
+      iSay.push "Buzz" if canISayBuzz?(number)
+      
+      iSay.push number if iSay.empty?
 
-      if canISayFizz?(number)
-        iSay.push "Fizz"
-      end
-
-      if canISayBuzz?(number)
-        iSay.push "Buzz"
-      end
-
-      iSay.any? ? iSay.join(" ") : number
+      iSay.join(" ")
     end
 
     private
