@@ -2,48 +2,50 @@ require "rspec"
 require "./lib/fizz_buzz"
 
 module FizzBuzz
-    describe Player do
+  describe Player do
 
-        let(:player){FizzBuzz::Player.new}
+    let(:player){FizzBuzz::Player.new}
 
-        def player_says number
-            player.say number
-        end
-
-        context "for a given string" do
-            it "it should throw an error" do
-                expect{player_says("blah blah blah")}.to raise_error ::ArgumentError
-            end
-        end
-        context "for a given number" do
-            it "should not say number 0" do
-                expect{player_says(0)}.to raise_error FizzBuzz::Player::CanNotSayZero
-            end
-            
-            it "should say 'Fizz'" do
-                [3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60].each do |number|
-                    player_says(number).should include("Fizz")
-                end
-            end
-
-            it "should say 'Buzz'" do
-                [5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,105].each do |number|
-                    player_says(number).should include("Buzz")
-                end
-            end
-
-            it "should say 'Fizz Buzz'" do
-                [15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255].each do |number|
-                    player_says(number).should == "Fizz Buzz"
-                end
-            end
-
-            it "should say number" do
-                [1,2,4,7,8,11,13,14,16,17,19,22,23,26,28,29,31,32].each do |number|
-                    player_says(number).should == number
-                end
-            end
-        end
-
+    context "for a given string" do
+      it "should throw an error" do
+        expect{player.say "blah blah blah"}.to raise_error ::ArgumentError
+      end
     end
+    context "for a given number" do
+      it "cannot say zero" do
+        expect{player.say 0}.to raise_error FizzBuzz::Player::CanNotSayZero
+      end
+
+      it "cannot say negative numbers" do
+        [-1, -2, -43, -432].each do |negative_number|
+          expect{player.say negative_number}.to raise_error FizzBuzz::Player::CanNotSayNegatives
+        end
+      end
+
+      it "can say 'Fizz' when number is divisible by three" do
+        [3,6,9,12,18,21,24,27,33,36,39,42,48,51,54,57].each do |number|
+          player.say(number).should == "Fizz"
+        end
+      end
+
+      it "can say 'Buzz' when number is divisible by five" do
+        [5,10,20,25,35,40,50,55,65,70,80,85,95,100].each do |number|
+          player.say(number).should == "Buzz"
+        end
+      end
+
+      it "can say 'Fizz Buzz'" do
+        [15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255].each do |number|
+          player.say(number).should == "Fizz Buzz"
+        end
+      end
+
+      it "can say the number" do
+        [1,2,4,7,8,11,13,14,16,17,19,22,23,26,28,29,31,32].each do |number|
+          player.say(number).should == number
+        end
+      end
+    end
+
+  end
 end

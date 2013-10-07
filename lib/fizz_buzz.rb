@@ -1,34 +1,36 @@
 module FizzBuzz
-    class Player
+  class Player
 
-        CanNotSayZero = RuntimeError.new
+    CanNotSayZero      = Class.new RuntimeError
+    CanNotSayNegatives = Class.new RuntimeError
 
-        def say number
-            number = Integer(number)
+    def say number
+      number = Integer(number)
 
-            fail CanNotSayZero if (number == 0)
-            
-            iSay = Array.new
-            
-            if canISayFizz?(number)
-                iSay.push "Fizz"
-            end
+      fail CanNotSayZero      if (number == 0)
+      fail CanNotSayNegatives if (number < 0)
 
-            if canISayBuzz?(number)
-                iSay.push "Buzz"
-            end
+      iSay = Array.new
 
-            iSay.any? ? iSay.join(" ") : number
-        end
+      if canISayFizz?(number)
+        iSay.push "Fizz"
+      end
 
-        private
+      if canISayBuzz?(number)
+        iSay.push "Buzz"
+      end
 
-        def canISayFizz? number
-            number % 3 == 0
-        end
-
-        def canISayBuzz? number
-            number % 5 == 0
-        end
+      iSay.any? ? iSay.join(" ") : number
     end
+
+    private
+
+    def canISayFizz? number
+      number % 3 == 0
+    end
+
+    def canISayBuzz? number
+      number % 5 == 0
+    end
+  end
 end
