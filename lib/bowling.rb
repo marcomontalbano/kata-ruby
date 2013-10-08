@@ -1,37 +1,59 @@
 module Bowling
-    class Player
+  class Player
 
-        FRAMES = 10
-        
-        def initialize
-            @rolls       = Array.new(21) { 0 }
-            @currentRoll = 0
-        end
+    MAX_FRAMES = 10
 
-        def rolls pins
-            @rolls[ @currentRoll ] = pins
-            @currentRoll += 1
-            self
-        end
-
-        def score
-            score = 0
-
-            i = 0
-            (1..FRAMES).each do
-                if (@rolls[i] == 10)
-                    score += 10 + @rolls[i+1] + @rolls[i+2]
-                    i += 1
-                elsif (@rolls[i] + @rolls[i+1] == 10)
-                    score += 10 + @rolls[i+2]
-                    i += 2
-                else
-                    score += @rolls[i] + @rolls[i+1]
-                    i += 2
-                end
-            end
-
-            score
-        end
+    def initialize
+      @rolls        = Array.new(21) { 0 }
+      @current_roll = 0
     end
+
+    def rolls pins
+      @rolls[ @current_roll ] = pins
+      @current_roll += 1
+      self
+    end
+
+    def score
+      score = 0
+      roll_index = 0
+      (1..MAX_FRAMES).each do
+        if is_strike? roll_index
+          score += roll_strike(roll_index)
+          roll_index += 1
+        elsif is_spare? roll_index
+          score += roll_spare(roll_index)
+          roll_index += 2
+        else
+          score += roll_pins_frame(roll_index)
+          roll_index += 2
+        end
+      end
+
+      score
+    end
+
+    private
+
+    def is_strike? roll_index
+      @rolls[roll_index] == 10
+    end
+
+    def is_spare? roll_index
+      @rolls[roll_index] + @rolls[roll_index + 1] == 10
+    end
+
+    def roll_strike roll_index
+      10 + @rolls[roll_index + 1] + @rolls[roll_index + 2]
+    end
+
+    def roll_spare roll_index
+      10 + @rolls[roll_index + 2]
+    end
+
+    def roll_pins_frame roll_index
+      @rolls[roll_index] + @rolls[roll_index + 1]
+    end
+
+  end
 end
