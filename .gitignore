@@ -1,1 +1,9 @@
-.DS_Store
+# MAC System Files
+*DS_Store
+__MACOSX
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+/wiki
