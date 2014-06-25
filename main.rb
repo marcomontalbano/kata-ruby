@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-require "./lib/fizz_buzz"
+require "./lib/fizz-buzz"
 
 player = FizzBuzz::Player.new
 
