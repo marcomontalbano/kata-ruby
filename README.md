@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/bitbucket.org/mmontalbano/kata-fizz-buzz/status.png)](https://drone.io/bitbucket.org/mmontalbano/kata-fizz-buzz/latest)
+
 Fizz buzz
 =========
 
