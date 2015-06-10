@@ -18,29 +18,29 @@ module Bowling
 
     it "can scores 0 points" do
       knockOverPins(0, 20)
-      player.score.should == 0
+      expect(player.score).to be == 0
     end
 
     it "can scores 1 point for each frames" do
       knockOverPins(1, 20)
-      player.score.should == 20
+      expect(player.score).to be == 20
     end
 
     it "can spares" do
       player.rolls(5).rolls(5).rolls(2)
       knockOverPins(0, 17)
-      player.score.should == 14
+      expect(player.score).to be == 14
     end
 
     it "can strike" do
       player.rolls(10).rolls(2).rolls(5)
       knockOverPins(0, 16)
-      player.score.should == 24
+      expect(player.score).to be == 24
     end
 
     it "can do a perfect game" do
       knockOverPins(10, 12)
-      player.score.should == 300
+      expect(player.score).to be == 300
     end
 
     it "can really play a game" do
@@ -55,7 +55,7 @@ module Bowling
       .rolls(10)
       .rolls(10)
       .rolls(6).rolls(4).rolls(4)
-      player.score.should == 149
+      expect(player.score).to be == 149
     end
   end
 end

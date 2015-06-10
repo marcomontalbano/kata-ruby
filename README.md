@@ -1,3 +1,5 @@
+[![Build Status](https://drone.io/bitbucket.org/mmontalbano/kata-bowling/status.png)](https://drone.io/bitbucket.org/mmontalbano/kata-bowling/latest)
+
 Bowling
 =======
 
@@ -32,6 +34,16 @@ How to test
 -----------
 
 `rspec spec/bowling_spec.rb`
+
+
+Easier way
+----------
+
+```ssh
+
+bundle install
+bundle exec rake
+```
 
 
 How to play
