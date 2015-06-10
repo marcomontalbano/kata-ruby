@@ -36,6 +36,16 @@ How to test
 `rspec spec/fizz_buzz_spec.rb`
 
 
+Easier way
+----------
+
+```ssh
+
+bundle install
+bundle exec rake
+```
+
+
 How to play
 -----------
 
