@@ -1,4 +1,4 @@
-[![Build Status](https://drone.io/bitbucket.org/mmontalbano/kata-bowling/status.png)](https://drone.io/bitbucket.org/mmontalbano/kata-bowling/latest)
+[![Build Status](https://drone.io/bitbucket.org/marcomontalbano/kata-bowling/status.png)](https://drone.io/bitbucket.org/marcomontalbano/kata-bowling/latest)
 
 Bowling
 =======
