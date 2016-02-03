@@ -1,3 +1,6 @@
+[![Build Status](https://drone.io/github.com/mmontalbano/kata-ruby-tt/status.png)](https://drone.io/github.com/mmontalbano/kata-ruby-tt/latest)
+
+
 Ruby Tip & Tricks
 =================
 
@@ -28,7 +31,10 @@ How to test
 `rspec spec/ruby_tt_spec.rb`
 
 
-How to play
------------
+Easier way
+----------
 
-`ruby main.rb`
+```ssh
+bundle install
+bundle exec rake
+```
