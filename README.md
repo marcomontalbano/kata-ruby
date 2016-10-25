@@ -1,4 +1,4 @@
-
+[![Build Status](https://img.shields.io/travis/marcomontalbano/kata-ruby/master.svg?style=flat-square)](https://travis-ci.org/marcomontalbano/kata-ruby)
 
 
 TOC
