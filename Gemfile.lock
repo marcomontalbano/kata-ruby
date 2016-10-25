@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kata-ruby-tt (1.0)
+    kata-ruby (1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -27,6 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  kata-ruby-tt!
+  kata-ruby!
   rake
   rspec

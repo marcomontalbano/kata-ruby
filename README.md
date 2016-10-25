@@ -1,8 +1,12 @@
-[![Build Status](https://drone.io/github.com/mmontalbano/kata-ruby-tt/status.png)](https://drone.io/github.com/mmontalbano/kata-ruby-tt/latest)
 
 
-Ruby Tip & Tricks
-=================
+
+TOC
+===
+
+* Ruby Tip & Tricks
+* FizzBuzz
+* Bowling
 
 
 How to configure
@@ -28,7 +32,7 @@ Install rspec:
 How to test
 -----------
 
-`rspec spec/ruby_tt_spec.rb`
+`rspec spec`
 
 
 Easier way
@@ -38,3 +42,9 @@ Easier way
 bundle install
 bundle exec rake
 ```
+
+
+How to play
+-----------
+
+`ruby main.rb`
