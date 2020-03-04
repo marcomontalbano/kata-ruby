@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/marcomontalbano/kata-ruby.svg?branch=master)](https://travis-ci.org/marcomontalbano/kata-ruby)
+[![Build Status](https://travis-ci.org/marcomontalbano/kata.rb.svg?branch=master)](https://travis-ci.org/marcomontalbano/kata.rb)
 
 
 TOC
