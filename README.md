@@ -18,30 +18,33 @@ Make sure you have the latest RVM:
 
 Just run this in your favorite terminal after installing RVM:
 
-`rvm install ruby-2.0.0`
+`rvm install ruby-2.4`
 
 Create a new gemset and use it:
 
-`rvm use ruby-2.0.0-p247@tdd --create`
+`rvm use @tdd --create`
 
-Install rspec:
+Get gemset list:
 
-`gem install rspec`
+`rvm gemset list`
+
+Install bundler:
+
+`gem install bundler`
+
+Install gems:
+
+`bundle install`
+
+Execute tasks:
+
+`bundle exec rake`
 
 
 How to test
 -----------
 
 `rspec spec`
-
-
-Easier way
-----------
-
-```ssh
-bundle install
-bundle exec rake
-```
 
 
 How to play
